@@ -37,9 +37,7 @@
 		<?php if ($box['BoxesPageContainer']['is_published']) : ?>
 			<div class="panel panel-success box-panel-body">
 				<div class="panel-body tab-content">
-					<?php if (! SiteSettingUtil::read('App.usage_limit')) : ?>
-						<?php echo $this->PageLayout->renderAddPlugin($box); ?>
-					<?php endif; ?>
+					<?php echo $this->PageLayout->renderAddPlugin($box); ?>
 					<?php echo $this->PageLayout->renderFrames($box); ?>
 				</div>
 			</div>
