@@ -19,7 +19,9 @@
 					</div>
 
 					<div class="panel-body">
-						<?php echo $this->PageLayout->renderAddPlugin($box); ?>
+						<?php if (! SiteSettingUtil::read('App.usage_limit')) : ?>
+							<?php echo $this->PageLayout->renderAddPlugin($box); ?>
+						<?php endif; ?>
 						<?php echo $this->PageLayout->renderFrames($box); ?>
 					</div>
 				</div>

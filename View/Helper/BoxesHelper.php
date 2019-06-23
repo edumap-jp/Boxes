@@ -185,7 +185,7 @@ class BoxesHelper extends AppHelper {
 			$title = __d('boxes', 'Area of this page only%s', $containerTitle);
 		}
 
-		if ($this->hasBoxSetting($box)) {
+		if ($this->hasBoxSetting($box) && ! SiteSettingUtil::read('App.usage_limit')) {
 			$html .= $this->displayBoxSetting($box, $title);
 		} else {
 			$html .= $title;
